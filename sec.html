@@ -1,0 +1,54 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+font-family: Arial;
+color: black;
+}
+.split{
+height:50%;
+width:100%;
+position:fixed;
+z-index:1;
+overflow-x:hidden;
+}
+.top {
+top:0;
+background color:red;
+border:10px;
+
+}
+.bottom{
+bottom:0;
+background color:black;
+border:10px;
+}
+</style>
+<body>
+<div class="split top">
+<h2><i>Amazing online videos</i></h2>
+<img src = "http://www.civitas-stl.com/wp-content/uploads/2017/09/video-logo.jpg" alt="logo" height="300" width="300">
+</div>
+<div class="split bottom">
+<hr>
+<h2><i>Video of the week</i></h2>
+<button onclick="playVid()" type="button" autofocus> Play Video </button>
+<button onclick="pauseVid()" type="button" autofocus> pause video </button><br>
+<Object id="myVideo" width="320" height="176" data="https://www.youtube.com/embed/dGIaLcgjb0I">
+  Your browser does not support HTML5 video.
+</Object>
+<br>
+</div>
+<script type="text/script"> 
+var v=document.getElementById("myVideo");
+function playVid(){
+v.get(1).play();
+}
+function pauseVid(){
+v.pause();
+}
+</script>
+</body>
+</html> 
